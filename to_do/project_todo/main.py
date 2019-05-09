@@ -1,6 +1,4 @@
-
-#QUETIONS:
-#Why not include self.todos as an arg in todolist? Is it b/c this prob asks to get user input?
+#QUETIONS: #Why not include self.todos as an arg in todolist? Is it b/c this prob asks to get user input?
 
 from todo import ToDo
 from todolist import ToDoList 
@@ -36,7 +34,6 @@ def user_todos():
         else:
             #user_todo_list is an instance and I'm calling add_todo method on this instance, passing in todo (which contains the users input) and due_date (I deal with due_date info in the class itself)
             user_todo_list.add_todo(todo, due_date)
-            
 
 #This is the output
 todo_list = user_todos()
