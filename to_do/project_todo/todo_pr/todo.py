@@ -3,7 +3,7 @@
 class ToDo():
     """Create a todo and add details to do, like due date and status"""
 
-    def __init__(self, todo_name, due_date):
+    def __init__(self, todo_name, due_date='TBD'):
         self.todo_name = todo_name
         self.due_date = due_date
 

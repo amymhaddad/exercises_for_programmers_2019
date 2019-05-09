@@ -12,7 +12,10 @@ class ToDoList():
     def add_todo(self, todo, due_date):
         """Add each todo instance to a list of todos"""
 
-        user_todo = ToDo(todo, due_date)
+        if due_date:
+            user_todo = ToDo(todo, due_date)
+        elif due_date == '':
+            user_todo = ToDo(todo)
         self.todos.append(user_todo)
 
     def __repr__(self):
