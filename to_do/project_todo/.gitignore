@@ -1,3 +1,8 @@
 .venv/
 todo_practice
 todolist.py
+dict_todo/
+export_todo_csv/
+final_todo/
+json_todo/
+../questions.py
