@@ -1,9 +1,0 @@
-.venv/
-todo_practice
-dict_todo/
-export_todo_csv/
-final_todo/user_todos.csv
-final_todo/user_todos.json
-json_todo/
-../questions.py
-../to_do.py
