@@ -35,7 +35,8 @@ def get_valid_item_input(data):
     """Prompt user until recieve valid item name"""
 
     while True:
-        data = access_json_data(sys.argv[1])
+        #take this line out b/c I'm redoing work. 
+        # data = access_json_data(sys.argv[1])
         item_to_search = get_item_name_from_user()
         product_in_inventory = validate_item(item_to_search, data)
 
