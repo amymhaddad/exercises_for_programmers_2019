@@ -4,14 +4,12 @@
 def validate_item(item_to_search, data):
     """Verify that the product exists: return True if it exists; return False if it doesn't"""
 
-    # I want to iterate thru ALL items (not just the first one) so I move the return False outside of the loop
     for item in data["products"]:
         if item["name"] == item_to_search:
             return True
     return False
 
 
-# IF the item is in the json file, then I need to extrac the dictionary. Pass this diction ary to _style_dictionary fucntion
 def inventory_details_for_user_item(item, data):
     """Return the dictionary associated with a specific user item"""
 
@@ -20,7 +18,7 @@ def inventory_details_for_user_item(item, data):
             return item_details
 
 
-def _style_dictionary_items_for_output(inventory):
+def style_dictionary_items_for_output(inventory):
     """Update keys, values in inventory dictionary for user readability"""
     user_inventory_items = {}
 

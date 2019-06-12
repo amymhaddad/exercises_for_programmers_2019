@@ -4,7 +4,7 @@ import sys
 from product_search import (
     validate_item,
     inventory_details_for_user_item,
-    _style_dictionary_items_for_output,
+    style_dictionary_items_for_output,
     return_product_details,
 )
 from data_management import access_json_data
@@ -23,11 +23,11 @@ def main(filename):
     item = get_valid_item_input(data)
 
     # core
-    inventory = inventory_details_for_user_item(item, data)
-    inventory_for_output = _style_dictionary_items_for_output(inventory)
+    inventory_details = inventory_details_for_user_item(item, data)
+    product_detail_output = style_dictionary_items_for_output(inventory_details)
 
     # output
-    output_for_user = return_product_details(inventory_for_output)
+    output_for_user = return_product_details(product_detail_output)
     print(output_for_user)
 
 
@@ -35,9 +35,8 @@ def get_valid_item_input(data):
     """Prompt user until recieve valid item name"""
 
     while True:
-        #take this line out b/c I'm redoing work. 
-        # data = access_json_data(sys.argv[1])
         item_to_search = get_item_name_from_user()
+        #If I change the parameters in the function (ie, data, search), I get an error. 
         product_in_inventory = validate_item(item_to_search, data)
 
         if product_in_inventory == True:
