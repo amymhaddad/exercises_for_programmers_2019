@@ -9,7 +9,7 @@ def sorted_full_names_space_people():
     return sorted(space_people, key=lambda last_name: last_name[-1])
 
 
-def tabulate_table(sorted_full_names, spacecraft_name, headers):
+def tabulate_table(sorted_full_names, spacecraft_name):
     """Return a tabulated table with space people's names and spacecraft name"""
     table = [sorted_full_names, spacecraft_name]
-    return tabulate(table, headers)
+    return tabulate(table)

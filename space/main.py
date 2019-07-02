@@ -1,6 +1,6 @@
 """See who's currently in space; get their name and spacecraft"""
 
-from space_request import space_people, spacecraft_name, headers
+from space_request import spacecraft_name
 from organize_space_data import sorted_full_names_space_people, tabulate_table
 
 
@@ -12,7 +12,7 @@ def people_in_space():
 
     sorted_full_names = sorted_full_names_space_people()
 
-    table = tabulate_table(sorted_full_names, spacecraft_name, headers)
+    table = tabulate_table(sorted_full_names, spacecraft_name)
     print(table)
 
 
