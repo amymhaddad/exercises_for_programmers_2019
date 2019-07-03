@@ -1,7 +1,7 @@
 """Program that returns inventory details based for an inventory item"""
 
 
-def validate_item(item_to_search, data):
+def validate_item(data, item_to_search):
     """Verify that the product exists: return True if it exists; return False if it doesn't"""
 
     for item in data["products"]:
