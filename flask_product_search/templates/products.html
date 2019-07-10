@@ -1,0 +1,16 @@
+    <body>
+        {% extends "base.html" %}
+        {% block content %}
+        {% for name, details in all_products.items() %}
+            {% for category, detail in details.items() %}
+                {% if category == 'price' %}
+                    {% set detail = "${:.2f}".format(details['price']) %}
+                {% endif %}
+
+                {{ detail }}
+        
+        {% endfor %}
+        {% endfor %}
+        {% endblock %}
+
+    </body>

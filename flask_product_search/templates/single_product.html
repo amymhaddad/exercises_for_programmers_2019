@@ -1,0 +1,20 @@
+
+    <body>
+        <div>
+            {% extends "base.html" %}
+            {% block content %}
+            {% for category, info in single_product.items() %}
+                {% if category == 'price' %}
+                    {% set info = "${:.2f}".format(single_product['price']) %}
+                {% endif %}
+
+                {{ category }}
+                {{ info }}
+
+                
+            {% endfor %}
+            {% endblock %}
+            
+        </div>
+    </body>
+
